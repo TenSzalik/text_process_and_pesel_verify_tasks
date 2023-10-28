@@ -6,7 +6,8 @@ from domain.managers.pesel_manager import PeselManager
 
 
 def test_create_pesel_manager(pesel_valid_entity):
-    """Responsible for testing creation of PeselManager"""
+    """ Responsible for testing creation of PeselManager
+    """
     pesel_manager = PeselManager(pesel=pesel_valid_entity)
     assert callable(pesel_manager.is_valid)
     assert callable(pesel_manager.get_birth_date)

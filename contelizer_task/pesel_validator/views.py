@@ -19,12 +19,11 @@ def pesel_validator_view(request):
             else:
                 return render(
                     request,
-                    "pesel_validator_result.html",
+                    "pesel/pesel_validator_result.html",
                     {
-                        "pesel": f"PESEL is valid \n Data: {pesel.get_birth_date()}, gender: {pesel.get_gender()}"
+                        "pesel": f"PESEL is valid. Data: {pesel.get_birth_date()}, gender: {pesel.get_gender()}"
                     },
                 )
-
     else:
         form = PESELForm()
-    return render(request, "pesel_validator_form.html", {"form_pesel": form})
+    return render(request, "pesel/pesel_validator_form.html", {"form_pesel": form})

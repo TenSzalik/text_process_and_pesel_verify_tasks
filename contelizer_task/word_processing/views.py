@@ -19,4 +19,4 @@ def word_processing_view(request):
     else:
         form = WordProcessingForm()
 
-    return render(request, "word_processing_form.html", {"form": form})
+    return render(request, "word_processing/word_processing_form.html", {"form": form})

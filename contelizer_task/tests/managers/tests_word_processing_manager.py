@@ -4,9 +4,10 @@ from domain.entities.word_prcessing_entity import WordProcessingEntity
 from domain.managers.word_processing_manager import WordProcessingManager
 
 
-def test_create_word_processing_manager():
-    """Responsible for testing creation of WordProcessManager"""
-    word_processing_entity = WordProcessingEntity(content="foo bar baz 123456789")
+def test_create_word_processing_manager(word_processing_valid_entity):
+    """ Responsible for testing creation of WordProcessingManager
+    """
+    word_processing_entity = WordProcessingEntity(word_processing_valid_entity.content)
     word_processing_manager = WordProcessingManager(word_processing_entity)
     assert callable(word_processing_manager.shuffle_content)
 
@@ -20,8 +21,8 @@ def test_create_word_processing_manager():
     ],
 )
 def test_word_processing_shuffle_word(word, expected_length):
-    """Responsible for checking whether one single word was shuffled.
-    First and last letter shouldn't be shuffled.
+    """ Responsible for checking whether one single word was shuffled.
+    The first and last letter in each word should not be shuffled.
     """
     shuffled = WordProcessingManager.shuffle_word(word)
     assert len(shuffled) == expected_length
@@ -47,8 +48,8 @@ def test_word_processing_shuffle_word(word, expected_length):
     ],
 )
 def test_word_processing_shuffle_content(text):
-    """Responsible for checking whether content was shuffled.
-    First and last letter shouldn't be shuffled.
+    """ Responsible for checking whether content was shuffled.
+    The first and last letter in each word should not be shuffled.
     """
     word_processing = WordProcessingEntity(text)
     manager = WordProcessingManager(word_processing)

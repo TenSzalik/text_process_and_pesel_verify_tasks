@@ -16,13 +16,14 @@ import pytest
         (b"This is regular, representative tekst for test."),
     ],
 )
-def test_send_word_processing_form_loose_false(client, text):
+def test_send_word_processing_form(client, text):
     file_data = text
     file_data_array = file_data.decode().split(" ")
     response = client.post(
         reverse("process_text"), {"content": SimpleUploadedFile("test.txt", file_data)}
     )
     assert response.status_code == 200
+    assert response.templates == []
 
     shuffled_array = response.content.decode()
     shuffled_array = shuffled_array.split(" ")
