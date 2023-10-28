@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form_pesel.as_p }}
+    <button type="submit">Wyślij</button>
+</form>
+
+{% endblock %}

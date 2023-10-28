@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Strona Główna</title>
+</head>
+<body>
+    <h1>Wybierz formularz:</h1>
+    <ul>
+        <li><a href="{% url 'process_text' %}">Przetwarzanie pliku tekstowego</a></li>
+        <li><a href="{% url 'pesel' %}">Walidacja numeru PESEL</a></li>
+    </ul>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

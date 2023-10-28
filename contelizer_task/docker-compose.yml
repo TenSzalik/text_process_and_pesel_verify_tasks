@@ -1,0 +1,12 @@
+version: '1'
+
+services:
+  contelizer_service:
+    build: .
+    container_name: contelizer_service
+    volumes:
+      - .:/contelizer
+    ports:
+      - "8000:8000"
+    stdin_open: true
+    tty: true
