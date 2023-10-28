@@ -4,8 +4,10 @@
 
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Wyślij</button>
+    <div class="form-group">
+        {{ form.as_p }}
+    </div>
+    <button type="submit" class="btn btn-primary">Wyślij</button>
 </form>
 
 {% endblock %}

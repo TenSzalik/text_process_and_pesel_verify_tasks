@@ -1,2 +1,3 @@
 django
+django-bootstrap5
 more-itertools

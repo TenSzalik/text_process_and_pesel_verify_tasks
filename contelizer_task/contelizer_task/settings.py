@@ -17,6 +17,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    "django_bootstrap5",
+
     "pesel_validator",
     "word_processing",
 ]
@@ -48,6 +51,10 @@ TEMPLATES = [
         },
     },
 ]
+
+BOOTSTRAP5 = {
+    'include_jquery': True,
+}
 
 WSGI_APPLICATION = "contelizer_task.wsgi.application"
 

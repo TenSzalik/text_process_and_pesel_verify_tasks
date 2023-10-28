@@ -1,11 +1,11 @@
 {% extends "main.html" %}
 
 {% block content %}
-
-<form method="post">
+<form method="post" class="form">
     {% csrf_token %}
-    {{ form_pesel.as_p }}
-    <button type="submit">Wyślij</button>
+    <div class="form-group">
+        {{ form_pesel.as_p }}
+    </div>
+    <button type="submit" class="btn btn-primary">Wyślij</button>
 </form>
-
 {% endblock %}
