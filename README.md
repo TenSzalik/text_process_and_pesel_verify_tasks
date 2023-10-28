@@ -1,6 +1,8 @@
 # Contelizer recruitment task
 
-A Django website with two services: one for checking the PESEL number and extracting information from it (gender and date of birth). The other service is for uploading .txt files and shuffling the letters in each word.
+A Django website with two services: one for checking the PESEL* number and extracting information from it (gender and date of birth). The other service is for uploading .txt files and shuffling the letters in each word.
+
+*PESEL is the national identification number used in Poland since 1979. It always has 11 digits, identifies just one person and cannot be changed to another one.
 
 ## How to run
 
